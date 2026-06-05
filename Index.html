@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Security Awareness Demo</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+    }
+    .container {
+        width: 360px;
+        margin: 60px auto;
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,.15);
+    }
+    input, button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+    button {
+        background: #0066cc;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .notice {
+        margin-top: 15px;
+        color: #b00020;
+        font-size: 14px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
 
+<div class="container">
+    <h2>Card Verification</h2>
+
+    <input type="text" placeholder="Cardholder Name" disabled>
+    <input type="text" placeholder="Card Number" disabled>
+    <input type="text" placeholder="MM/YY" disabled>
+    <input type="text" placeholder="CVV" disabled>
+
+    <button onclick="showTrainingMessage()">
+        Verify Card
+    </button>
+
+    <div id="result" class="notice"></div>
+</div>
+
+<script>
+function showTrainingMessage() {
+    document.getElementById("result").innerHTML =
+        "This was a security awareness exercise. Never enter payment information from an unexpected email or text message. Always verify the website address and contact your bank directly if you are unsure.";
+}
+</script>
+
+</body>
+</html>
+Misti
